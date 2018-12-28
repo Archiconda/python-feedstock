@@ -28,9 +28,10 @@ build:
     - bash Archiconda3-*.sh -b
     - source /root/archiconda3/bin/activate root
     - conda --version
-    - conda config --show
-    - conda update conda conda-build anaconda-client --yes
+    - conda update conda --yes
     - conda --version
+    - conda install conda-build anaconda-client --yes
+    - conda config --show
     # For noarch packages
     # But for now, they all crash
     # - conda config --add channels conda-forge
