@@ -83,8 +83,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
-    - {{ cdt('libx11-devel') }}          # [linux]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux64]
+    - {{ cdt('libx11-devel') }}          # [linux64]
     - 7za                                # [win]
     - curl                               # [win]
     - make                               # [unix]
@@ -95,7 +95,7 @@ requirements:
     - openssl           # [unix]
     - readline          # [unix]
     - sqlite            # [unix]
-    - tk                # [unix]
+    - tk                # [unix and not aarch64]
     - xz                # [unix]
     - zlib              # [unix]
     - ncurses           # [linux]
@@ -104,7 +104,7 @@ requirements:
     - openssl           # [unix]
     - readline          # [unix]
     - sqlite            # [unix]
-    - tk                # [unix]
+    - tk                # [unix and not aarch64]
     - xz                # [unix]
     - zlib              # [unix]
     - ncurses           # [linux]
