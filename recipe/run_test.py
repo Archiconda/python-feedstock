@@ -4,7 +4,7 @@ import subprocess
 
 armv6l = bool(platform.machine() == 'armv6l')
 armv7l = bool(platform.machine() == 'armv7l')
-aarch64 = bool(platform.machine() == 'arch64')
+aarch64 = bool(platform.machine() == 'aarch64')
 ppc64le = bool(platform.machine() == 'ppc64le')
 if sys.platform == 'darwin':
     osx105 = b'10.5.' in subprocess.check_output('sw_vers')
