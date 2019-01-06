@@ -15,6 +15,7 @@ env:
 build:
   pre_ci_boot:
     image_name: archiconda/centos7
+    image_tag: archiconda3builder
     # image_name: arm64v8/ubuntu
     # image_tag: 18.04
     pull: True
