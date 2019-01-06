@@ -93,7 +93,7 @@ requirements:
     - nasm 2.11.06      # [win]
     - bzip2             # [unix]
     - openssl           # [unix]
-    - readline          # [unix]
+    - readline          # [linux64 or osx]
     - sqlite            # [unix]
     - tk                # [unix and not aarch64]
     - xz                # [unix]
@@ -102,7 +102,7 @@ requirements:
     - libffi            # [unix]
   run:
     - openssl           # [unix]
-    - readline          # [unix]
+    - readline          # [linux64 or osx]
     - sqlite            # [unix]
     - tk                # [unix and not aarch64]
     - xz                # [unix]
