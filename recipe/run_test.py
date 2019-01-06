@@ -80,7 +80,8 @@ if sys.platform != 'win32':
     import fcntl
     import grp
     import nis
-    import readline
+    # Readline is not an important module
+    # import readline
     import resource
     import syslog
     import termios
