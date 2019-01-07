@@ -17,6 +17,7 @@ subprocess.check_call([join(sys.prefix,
       'Scripts/2to3.exe' if sys.platform == 'win32' else 'bin/2to3'), '-h'])
 
 armv7l = bool(platform.machine() == 'armv7l')
+aarch64 = bool(platform.machine() == 'aarchi64')
 ppc64le = bool(platform.machine() == 'ppc64le')
 debug = int(os.getenv('DEBUG', 0))
 
@@ -105,14 +106,15 @@ if sys.platform != 'win32':
     import fcntl
     import grp
     import nis
-    import readline
+    if not aarch64:
+        import readline
+        readline.clear_history()
     import resource
     import syslog
     import termios
 
-    readline.clear_history()
 
-if not (armv7l or ppc64le):
+if not (armv7l or ppc64le or aarch64):
     import _tkinter
     import Tkinter
     import turtle

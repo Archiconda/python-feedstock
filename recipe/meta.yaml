@@ -80,8 +80,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
-    - {{ cdt('libx11-devel') }}          # [linux]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux64]
+    - {{ cdt('libx11-devel') }}          # [linux64]
     - make                               # [unix]
     - pkg-config                         # [unix]
   host:
@@ -89,8 +89,8 @@ requirements:
     - sqlite                             # [unix]
     - zlib                               # [unix]
     - openssl                            # [unix]
-    - readline                           # [unix]
-    - tk                                 # [unix]
+    - readline                           # [linux64 or orx]
+    - tk                                 # [linux64 or osx]
     - ncurses                            # [unix]
     - libffi                             # [unix]
 
