@@ -82,7 +82,8 @@ if sys.platform != 'win32':
     import grp
     import nis
     # nobody needs readline
-    # import readline
+    if not aarch64:
+        import readline
     import resource
     import syslog
     import termios
