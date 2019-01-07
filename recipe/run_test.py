@@ -4,6 +4,7 @@ import subprocess
 
 armv6l = bool(platform.machine() == 'armv6l')
 armv7l = bool(platform.machine() == 'armv7l')
+aarch64 = bool(platform.machine() == 'aarch64')
 ppc64le = bool(platform.machine() == 'ppc64le')
 if sys.platform == 'darwin':
     osx105 = b'10.5.' in subprocess.check_output('sw_vers')
@@ -80,13 +81,14 @@ if sys.platform != 'win32':
     import fcntl
     import grp
     import nis
-    import readline
+    # nobody needs readline
+    # import readline
     import resource
     import syslog
     import termios
 
 
-if not (armv6l or armv7l or ppc64le or osx105):
+if not (armv6l or armv7l or ppc64le or osx105 or aarch64):
     import tkinter
     import turtle
     import _tkinter
