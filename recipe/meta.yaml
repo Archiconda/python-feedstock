@@ -99,7 +99,8 @@ test:
     - python -V
     - pydoc -h
     - python-config --help  # [unix]
-    - idle -h
+    # idle requires tk which i'm not building right now
+    - idle -h   # [not aarch64]
     - python -c "import sysconfig; print sysconfig.get_config_var('CC')"
     {% if 'toolchain' not in compiler('c') %}
     -  _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_x86_64_conda_cos6_linux_gnu python -c "import sysconfig; print sysconfig.get_config_var('CC')"  # [linux64]
