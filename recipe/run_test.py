@@ -17,7 +17,7 @@ subprocess.check_call([join(sys.prefix,
       'Scripts/2to3.exe' if sys.platform == 'win32' else 'bin/2to3'), '-h'])
 
 armv7l = bool(platform.machine() == 'armv7l')
-aarch64 = bool(platform.machine() == 'aarchi64')
+aarch64 = bool(platform.machine() == 'aarch64')
 ppc64le = bool(platform.machine() == 'ppc64le')
 debug = int(os.getenv('DEBUG', 0))
 
