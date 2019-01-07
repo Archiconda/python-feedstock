@@ -169,6 +169,8 @@ pushd $PREFIX/lib/python${VER}
       PY_ARCH=i386
     elif [[ ${HOST} =~ powerpc64le.* ]]; then
       PY_ARCH=powerpc64le
+    elif [[ ${HOST} =~ aarch64.* ]]; then
+      PY_ARCH=aarch64
     else
       echo "ERROR: Cannot determine PY_ARCH for host ${HOST}"
       exit 1
