@@ -1,23 +1,16 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
-build_number_decrement:
-- '1000'
+BUILD: aarch64-conda_cos7-linux-gnu
 bzip2:
 - '1'
 c_compiler:
-- toolchain_c
+- gcc
 channel_sources:
-- conda-forge,defaults
+- archiarm,
 channel_targets:
-- conda-forge main
+- archiarm main
 cxx_compiler:
-- toolchain_cxx
+- gxx
 libffi:
 - '3.2'
-macos_machine:
-- x86_64-apple-darwin13.4.0
-macos_min_version:
-- '10.9'
 ncurses:
 - '6.1'
 openssl:
@@ -41,11 +34,5 @@ sqlite:
 - '3'
 xz:
 - '5.2'
-zip_keys:
-- - c_compiler
-  - cxx_compiler
-  - channel_sources
-  - channel_targets
-  - build_number_decrement
 zlib:
 - '1.2'
