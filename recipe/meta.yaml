@@ -67,7 +67,7 @@ source:
     sha256: de3c87b26a80e789986d8e6950c6304175d3829afe9c6c7211eb7257266ab0ac         # [win]
 
 build:
-  number: 1001
+  number: 1002
   # Windows has issues updating python if conda is using files itself.
   # Copy rather than link.
   no_link:
@@ -83,8 +83,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux64]
-    - {{ cdt('libx11-devel') }}          # [linux64]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('libx11-devel') }}          # [linux]
     - 7za                                # [win]
     - curl                               # [win]
     - make                               # [unix]
@@ -93,7 +93,7 @@ requirements:
     - nasm 2.11.06      # [win]
     - bzip2             # [unix]
     - openssl           # [unix]
-    - readline          # [linux64 or osx]
+    - readline          # [linux or osx]
     - sqlite            # [unix]
     - tk                # [unix and not aarch64]
     - xz                # [unix]
@@ -102,7 +102,7 @@ requirements:
     - libffi            # [unix]
   run:
     - openssl           # [unix]
-    - readline          # [linux64 or osx]
+    - readline          # [linux or osx]
     - sqlite            # [unix]
     - tk                # [unix and not aarch64]
     - xz                # [unix]
