@@ -88,7 +88,7 @@ if sys.platform != 'win32':
     import termios
 
 
-if not (armv6l or armv7l or ppc64le or osx105 or aarch64):
+if not (armv6l or armv7l or ppc64le or osx105):
     import tkinter
     import turtle
     import _tkinter
