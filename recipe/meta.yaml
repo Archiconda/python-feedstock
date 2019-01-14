@@ -104,8 +104,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux64]
-    - {{ cdt('libx11-devel') }}          # [linux64]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('libx11-devel') }}          # [linux]
     - make                               # [unix]
     - pkg-config                         # [unix]
   host:
@@ -114,8 +114,8 @@ requirements:
     - xz                                 # [unix]
     - zlib                               # [unix]
     - openssl                            # [unix]
-    - readline                           # [linux64 and osx]
-    - tk                                 # [linux64 and osx]
+    - readline                           # [linux64 or osx]
+    - tk                                 # [unix]
     - ncurses                            # [unix]
     - libffi                             # [unix]
   run:
