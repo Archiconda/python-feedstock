@@ -80,8 +80,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux64]
-    - {{ cdt('libx11-devel') }}          # [linux64]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - {{ cdt('libx11-devel') }}          # [linux]
     - make                               # [unix]
     - pkg-config                         # [unix]
   host:
@@ -90,7 +90,7 @@ requirements:
     - zlib                               # [unix]
     - openssl                            # [unix]
     - readline                           # [linux64 or orx]
-    - tk                                 # [linux64 or osx]
+    - tk                                 # [unix]
     - ncurses                            # [unix]
     - libffi                             # [unix]
 
@@ -99,8 +99,7 @@ test:
     - python -V
     - pydoc -h
     - python-config --help  # [unix]
-    # idle requires tk which i'm not building right now
-    - idle -h   # [not aarch64]
+    - idle -h
     - python -c "import sysconfig; print sysconfig.get_config_var('CC')"
     {% if 'toolchain' not in compiler('c') %}
     -  _PYTHON_SYSCONFIGDATA_NAME=_sysconfigdata_x86_64_conda_cos6_linux_gnu python -c "import sysconfig; print sysconfig.get_config_var('CC')"  # [linux64]
