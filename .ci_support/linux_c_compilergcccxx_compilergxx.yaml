@@ -27,14 +27,22 @@ pin_run_as_build:
     max_pin: x.x
   openssl:
     max_pin: x.x.x
+  readline:
+    max_pin: x
   sqlite:
     max_pin: x
+  tk:
+    max_pin: x.x
   xz:
     max_pin: x.x
   zlib:
     max_pin: x.x
+readline:
+- '7.0'
 sqlite:
 - '3'
+tk:
+- '8.6'
 xz:
 - '5.2'
 zip_keys:
